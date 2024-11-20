@@ -46,12 +46,13 @@ tasks = load_tasks()
 # Add a new task
 if args.add:
     now = datetime.now().isoformat()
+    task_index = len(tasks)
     tasks.append({"description": args.add,
                   "status": "TODO",
                   "createdAt": now,
                   "updatedAt": now })
     save_tasks(tasks)
-    print(f"{args.tasklist} added: {args.add}")
+    print(f"{args.tasklist} Task added successfully (ID: {task_index})")
 
 # List all tasks
 if args.list:
