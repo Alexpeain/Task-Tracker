@@ -47,7 +47,9 @@ tasks = load_tasks()
 if args.add:
     now = datetime.now().isoformat()
     task_index = len(tasks)
-    tasks.append({"description": args.add,
+    tasks.append({
+                  "id": args.index,
+                  "description": args.add,
                   "status": "TODO",
                   "createdAt": now,
                   "updatedAt": now })
@@ -98,9 +100,9 @@ if args.update is not None and args.index is not None:
         tasks[args.index]['description'] = args.update
         tasks[args.index]['updatedAt'] =datetime.now().isoformat()
         save_tasks(tasks)
-        print(f"Updated task {old_task} to {args.update}.")
+        print(f"Task {args.index} updated successfully.")
     else:
-        print("Invalid index. Please provide a valid task index.")
+        (f"Task with ID {args.index} not found.")
 
 #Delete a task
 if args.delete and args.index is not None:
