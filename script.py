@@ -48,11 +48,11 @@ if args.add:
     now = datetime.now().isoformat()
     task_index = len(tasks)
     tasks.append({
-                  "id": args.index,
-                  "description": args.add,
-                  "status": "TODO",
-                  "createdAt": now,
-                  "updatedAt": now })
+        "id": args.index,
+        "description": args.add,
+        "status": "TODO",
+        "createdAt": now,
+        "updatedAt": now })
     save_tasks(tasks)
     print(f"{args.tasklist} Task added successfully (ID: {task_index})")
 
@@ -61,7 +61,7 @@ if args.list:
     print("Current tasks:")
     for idx, task in enumerate(tasks, start=1):
         print(f"{args.tasklist} {idx}. {task['description']} [{task['status']}] "
-              f"(Created at: {task['createdAt']}, Updated at: {task['updatedAt']})")
+            f"(Created at: {task['createdAt']}, Updated at: {task['updatedAt']})")
 
 #ListDone
 if args.list_done:
@@ -69,7 +69,7 @@ if args.list_done:
     completed_tasks = [task for task in tasks if task['status'] == 'Done']
     if completed_tasks:
         for idx,task in enumerate(completed_tasks, start=1):
-             print(f"{args.tasklist} {idx}. {task['description']} - Status: {task['status']}")
+            print(f"{args.tasklist} {idx}. {task['description']} - Status: {task['status']}")
     else:
         print("No completed tasks found.")
         
