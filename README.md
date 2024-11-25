@@ -65,3 +65,10 @@
 ```bash
     python script.py --mark-in-progress  #mark tasks in progress
 ```
+
+## Test Script
+
+```bash
+   python -m unittest discover
+```
+
