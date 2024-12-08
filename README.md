@@ -1,5 +1,28 @@
-# Task-Tracker-Cli
+# Task Tracker CLI
 
+A simple command line interface (CLI) application to track and manage your tasks. This application allows users to add, update, delete, and list tasks, all stored in a JSON file.
+
+## Features
+
+- **Add Tasks**: Add new tasks to your task list.
+- **Update Tasks**: Modify existing tasks with new descriptions.
+- **Delete Tasks**: Remove tasks from your list.
+- **Mark Tasks**: Mark tasks as "in progress" or "done".
+- **List Tasks**: View all tasks or filter by status (done, in progress, or todo).
+
+## Requirements
+
+- The application should run from the command line.
+- Accept user actions and inputs as arguments.
+- Store tasks in a JSON file located in the current directory.
+- If the JSON file does not exist, it should be created automatically.
+- Use the native file system module of your programming language to interact with the JSON file.
+- No external libraries or frameworks should be used.
+- Handle errors and edge cases gracefully.
+
+## Commands
+
+Here are the commands available in the Task Tracker CLI:
 ## Add Tasks
 
 ```bash
